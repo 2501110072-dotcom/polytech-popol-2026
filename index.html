@@ -1,13 +1,200 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cord2</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FRAME / BEYOND — Graduation Exhibition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+
+  <!-- INTRO PAGE -->
+  <section id="intro-page" class="page intro-page active">
+    <div class="intro-inner">
+      <div class="intro-kicker">2026 GRADUATION EXHIBITION</div>
+      <h1 class="intro-title">프레임 너머<br>우리를 만나다</h1>
+      <p class="intro-copy">서로 다른 시선과 이야기들이 하나의 공간에서 만납니다.<br>천천히 둘러보며 15명의 작품을 만나보세요.</p>
+      <button class="intro-enter" id="enter">입장하기 ↗</button>
+    </div>
+  </section>
+
+  <!-- TRANSITION PAGE -->
+  <section id="transition-page" class="page transition-page" aria-label="미술관 입장 장면">
+    <div class="entry-hall"></div>
+    <div class="entry-doors"><div class="door"></div><div class="door"></div></div>
+    <div class="transition-copy">
+      <small>PLEASE COME IN</small>
+      <h2>전시 공간으로 들어갑니다</h2>
+      <p>FRAME / BEYOND · 2026</p>
+    </div>
+  </section>
+
+  <!-- MAIN HEADER -->
+  <header>
+    <div class="brand">FRAME / BEYOND<small>GRADUATION EXHIBITION</small></div>
+    <nav class="pill-nav">
+      <button data-page="intro">HOME</button>
+      <button data-room="0" class="active">GALLERY 01</button>
+      <button data-room="1">GALLERY 02</button>
+      <button data-room="2">GALLERY 03</button>
+      <button data-page="list">LIST</button>
+    </nav>
+  </header>
+
+  <!-- GALLERY PAGE -->
+  <section id="gallery-page" class="page">
+    <section class="head">
+      <div>
+        <div class="eyebrow" id="room-subtitle">GALLERY 01 · 3D 투시 공간 (5명)</div>
+        <h1 id="title">GALLERY 01</h1>
+      </div>
+      <div class="count">전시실당 5명 · 총 15명</div>
+    </section>
+
+    <section class="stage" id="stage" aria-label="전시실 파노라마">
+      <div class="panorama" id="panorama">
+        
+        <!-- GALLERY 01 (학생 01~05) -->
+        <div class="room" data-index="0">
+          <div class="g1-center-wall"></div>
+          <div class="g1-left-wall"></div>
+          <div class="g1-right-wall"></div>
+          <div class="g1-floor"></div>
+
+          <div class="room-label">GALLERY 01</div>
+          <div class="room-guide">? 도움말</div>
+          
+          <div class="art-item" style="left: 4%; top: 52%;" onclick="openDetail(1)">
+            <div class="sculpture shape-round" style="width: 100px; height: 130px;">석고상<br>학생 01</div>
+            <div class="pedestal-base" style="width: 125px; height: 45px;"></div>
+          </div>
+          <div class="art-item" style="left: 24%; top: 32%;" onclick="openDetail(2)">
+            <div class="sculpture shape-rect" style="width: 95px; height: 145px;">석고상<br>학생 02</div>
+            <div class="pedestal-base" style="width: 120px; height: 100px;"></div>
+          </div>
+          <div class="art-item" style="left: 44%; top: 40%;" onclick="openDetail(3)">
+            <div class="sculpture shape-rect" style="width: 90px; height: 135px;">석고상<br>학생 03</div>
+            <div class="pedestal-base" style="width: 115px; height: 50px;"></div>
+          </div>
+          <div class="art-item" style="left: 64%; top: 46%;" onclick="openDetail(4)">
+            <div class="sculpture shape-dome" style="width: 95px; height: 125px;">석고상<br>학생 04</div>
+            <div class="pedestal-base" style="width: 120px; height: 80px;"></div>
+          </div>
+          <div class="art-item" style="left: 82%; top: 38%;" onclick="openDetail(5)">
+            <div class="sculpture shape-dome" style="width: 100px; height: 135px;">석고상<br>학생 05</div>
+            <div class="pedestal-base" style="width: 125px; height: 60px;"></div>
+          </div>
+        </div>
+
+        <!-- GALLERY 02 (학생 06~10) -->
+        <div class="room" data-index="1">
+          <div class="g2-center-wall"></div>
+          <div class="g2-left-wall"></div>
+          <div class="g2-pillar-front"></div>
+          <div class="g2-floor"></div>
+
+          <div class="room-label">GALLERY 02</div>
+          
+          <div class="art-item" style="left: 4%; top: 50%;" onclick="openDetail(6)">
+            <div class="sculpture shape-round" style="width: 100px; height: 130px;">석고상<br>학생 06</div>
+            <div class="pedestal-base" style="width: 125px; height: 45px;"></div>
+          </div>
+          <div class="art-item" style="left: 24%; top: 38%;" onclick="openDetail(7)">
+            <div class="sculpture shape-rect" style="width: 90px; height: 135px;">석고상<br>학생 07</div>
+            <div class="pedestal-base" style="width: 115px; height: 55px;"></div>
+          </div>
+          <div class="art-item" style="left: 43%; top: 25%;" onclick="openDetail(8)">
+            <div class="sculpture shape-rect" style="width: 95px; height: 140px;">석고상<br>학생 08</div>
+            <div class="pedestal-base" style="width: 120px; height: 120px;"></div>
+          </div>
+          <div class="art-item" style="left: 61%; top: 45%;" onclick="openDetail(9)">
+            <div class="sculpture shape-dome" style="width: 92px; height: 125px;">석고상<br>학생 09</div>
+            <div class="pedestal-base" style="width: 115px; height: 50px;"></div>
+          </div>
+          <div class="art-item" style="left: 69%; top: 52%; z-index: 10;" onclick="openDetail(10)">
+            <div class="sculpture shape-dome" style="width: 98px; height: 130px;">석고상<br>학생 10</div>
+            <div class="pedestal-base" style="width: 122px; height: 110px;"></div>
+          </div>
+        </div>
+
+        <!-- GALLERY 03 (학생 11~15) -->
+        <div class="room" data-index="2">
+          <div class="g3-center-wall"></div>
+          <div class="g3-left-wall"></div>
+          <div class="g3-right-wall"></div>
+          <div class="g3-floor"></div>
+
+          <div class="room-label">GALLERY 03</div>
+          <div class="room-guide">? 도움말</div>
+
+          <div class="art-item" style="left: 4%; top: 52%;" onclick="openDetail(11)">
+            <div class="sculpture shape-round" style="width: 100px; height: 130px;">석고상<br>학생 11</div>
+            <div class="pedestal-base" style="width: 125px; height: 45px;"></div>
+          </div>
+          <div class="art-item" style="left: 25%; top: 35%;" onclick="openDetail(12)">
+            <div class="sculpture shape-rect" style="width: 90px; height: 135px;">석고상<br>학생 12</div>
+            <div class="pedestal-base" style="width: 115px; height: 40px;"></div>
+          </div>
+          <div class="art-item" style="left: 45%; top: 18%;" onclick="openDetail(13)">
+            <div class="sculpture shape-rect" style="width: 95px; height: 150px;">석고상<br>학생 13</div>
+            <div class="pedestal-base" style="width: 120px; height: 110px;"></div>
+          </div>
+          <div class="art-item" style="left: 65%; top: 38%;" onclick="openDetail(14)">
+            <div class="sculpture shape-round" style="width: 88px; height: 125px;">석고상<br>학생 14</div>
+            <div class="pedestal-base" style="width: 112px; height: 45px;"></div>
+          </div>
+          <div class="art-item" style="left: 81%; top: 42%;" onclick="openDetail(15)">
+            <div class="sculpture shape-dome" style="width: 95px; height: 130px;">석고상<br>학생 15</div>
+            <div class="pedestal-base" style="width: 120px; height: 95px;"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 디테일 오버레이 -->
+      <div class="detail-view" id="detail-view">
+        <button class="detail-close-btn" id="detail-close" aria-label="닫기">×</button>
+        
+        <button class="nav-arrow left" id="nav-prev" aria-label="이전 작품">◀</button>
+        <button class="nav-arrow right" id="nav-next" aria-label="다음 작품">▶</button>
+
+        <div class="detail-content">
+          <div class="sculpture-3d-stage">
+            <div class="sculpture-3d-model" id="detail-sculpture">석고상 학생 01</div>
+            <div class="sculpture-3d-base"></div>
+            <div class="sculpture-hint">움직이거나 드래그해 보세요</div>
+          </div>
+
+          <div class="profile-card-2d">
+            <div>
+              <h2 id="detail-name">석고상 학생 01</h2>
+              <p id="detail-desc">50~100자 자기소개 텍스트 자리. 학생이 직접 제출한 소개를 공통 데이터에서 읽어 표시합니다.</p>
+            </div>
+            <button class="portfolio-btn" onclick="alert('포트폴리오 페이지로 이동합니다.')">
+              PORTFOLIO ↗
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button id="back">← 이전 전시실</button>
+      <div class="hint" id="hint">마우스를 움직이거나 드래그해 보세요</div>
+      <button id="forward">다음 전시실 →</button>
+    </div>
+    <p class="description">마우스를 움직이거나 드래그해 보세요. 석고상 작품을 클릭하면 해당 학생의 프로필을 볼 수 있습니다.</p>
+  </section>
+
+  <!-- LIST PAGE -->
+  <section id="list-page" class="page list-page">
+    <div class="eyebrow">ARTIST INDEX</div>
+    <h1 style="font-size:22px; font-weight:400; margin:8px 0;">학생 작품 목록 (총 15명)</h1>
+    <div class="student-grid" id="student-grid"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
 </html>
